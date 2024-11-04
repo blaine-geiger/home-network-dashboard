@@ -6,7 +6,7 @@ resources (even simple browser bookmarks) but I felt it would give me a chance t
 The side pop-out menus were an afterthought and lead to specific pages within the services for more precise navigation. The pop-menus work by hovering with the mouse cursor. 
 They are to show function of coding and customization more than to serve an essential purpose.
 
-The image is owned by me and hosted locally. It is a volcano (Agung).
+The image is owned by me and hosted locally.
 
 ## Screenshots
 The images below show the different menu options and each lead to specific interfaces. These include the GUIs for my network devices like firewall, router, and switch. There are also quick links for locally hosted services like Docker, Prometheus, InfluxDB, and Grafana.
