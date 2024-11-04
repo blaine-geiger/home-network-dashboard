@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System and Network Monitoring Dashboard</title>
+    <style>
+        /* CSS styling and classes */
+        /* General body styling */
+        body {
+            font-family: 'Courier New', Courier, monospace; /* Font set to terminal style */
+            background-image: url(''); /* Replace with image path or URL */
+            background-size: cover; /* Cover background with no stretch */
+            background-position: center; /* Center vert and horiz image */
+            background-repeat: no-repeat; /* No repeat of image (which is default) */
+            background-color: #1e1e1e; /* Failover color if image doesn't load */
+            color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center content for single page dashboard */
+            height: 100vh;
+        }
+
+        /* Container class styling */
+        .container {
+            background-color: rgba(51, 51, 51, 0.2); /* semi transparent bg of the container */
+            padding: 5px; /* padding b/w container and contents */
+            border-radius: 10px; /* round corners of container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            text-align: center;
+            margin: 20px;
+            max-width: 400px;
+            transform: translateY(-200px); /* move container up to better see image background */
+        }
+
+        /* Main menu button styling */
+        .dropdown-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #4a91c3;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin: 20px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #1f5b87;
+            color: #777777;
+        }
+
+        /* Dropdown menu styling */
+        .dropdown {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: (100%);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(173, 216, 230, 0.3);
+            border-radius: 8px;
+            margin-top: 10px;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        /* Dropdown menu button styles */
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: rgba(70, 130, 180, 0.8);
+            border-radius: 5px;
+            margin: 5px 10px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease; color: 0.3s ease;
+        }
+
+        .dropdown a:hover {
+            background-color: #87cefac5;
+            color: #505050;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown-btn:hover .dropdown {
+            display: block;
+        }
+        
+        .button-wrapper {
+            position: relative;
+        }
+
+        .button-link {
+            display: block;
+            padding: 15px 30px; /* Match this padding to other buttons */
+            background-color: #4a91c3; /* Background color for link buttons */
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .button-link:hover {
+            background-color: #357ab8;
+        }
+
+        /* Right pop-out menu styling */
+        .right-popout-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 0;
+            left: 100%; /* Position to the right of the Portainer link */
+            background-color: rgba(173, 216, 230, 0.3);
+            color: #ffffff;
+            text-decoration: none;    
+            border-radius: 5px;
+            font-size: 1.2em;
+            padding: 10px;
+            min-width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        /* Links inside the right pop-out menu */
+        .right-popout-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: background-color rgba(51, 51, 51, 0.2);
+            border-radius: 5px;
+            margin: 5px 0;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for right pop-out menu links */
+        .right-popout-menu a:hover {
+            background-color: #87cefac5;
+            color: #505050;
+        }
+
+        /* Show the right pop-out menu when hovering over the link */
+        .button-wrapper:hover .right-popout-menu {
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Network Button with Dropdown Menu for Firewall, Switch, and Router-->
+        <!-- These don't need right pop-out menus because they only have a single interface destination-->
+        <div class="dropdown-btn">Network
+            <div class="dropdown">
+                <a href="https://private.IP.x.x" target="_blank">Firewall</a>
+                <a href="https://private.IP.x.x" target="_blank">Switch</a>
+                <a href="https://private.IP.x.x" target="_blank">Router</a>
+
+            </div>
+        </div>
+
+        <!-- Server Button with Dropdown class -->
+        <div class="dropdown-btn">Server
+            <div class="dropdown">
+                <!-- Right pop-out menus with links, nested divs, and classes -->
+                <div class="button-wrapper">
+                    <a href="#" class="button-link">Portainer</a>
+                    <div class="right-popout-menu">
+                        <a href="IP address:port/path/to/GUI" target="_blank">Home</a>
+                        <a href="IP address:port/path/to/GUI" target="_blank">Dashboard</a>
+                        <a href="IP address:port/path/to/GUI" target="_blank">Containers</a>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <a href="#" class="button-link">InfluxDB</a>
+                    <div class="right-popout-menu">
+                        <a href="IP address:port/path/to/GUI" target="_blank">Home</a>
+                        <a href="IP address:port/path/to/GUI" target="_blank">Data Explorer</a>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <a href="#" class="button-link">Prometheus</a>
+                    <div class="right-popout-menu">
+                        <a href="IP address:port/path/to/GUI" target="_blank">Configuration</a>
+                        <a href="IP address:port/path/to/GUI" target="_blank">Targets</a>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <a href="#" class="button-link">Grafana</a>
+                    <div class="right-popout-menu">
+                        <a href="IP address:port/path/to/GUI" target="_blank">Docker Metrics</a>
+                        <a href="IP address:port/path/to/GUI" target="_blank">Server Metrics</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to handle hover actions
+        document.querySelectorAll('.dropdown-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                const dropdown = btn.querySelector('.dropdown');
+                if (dropdown) dropdown.style.display = 'block';
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                const dropdown = btn.querySelector('.dropdown');
+                if (dropdown) dropdown.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
