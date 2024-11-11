@@ -15,11 +15,11 @@ The images below show the different menu options and each lead to specific inter
 
 <p align="center">Hosted Docker services and frequently used interfaces for quick access
   <br/>
-  <img src="https://imgur.com/xroESzF.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/xroESzF.png" height="80%" width="80%" alt="Network services dashboard for quick access"/><br /><br />
 </p>
 
 
 <p align="center">Network devices and links for easy navigation
   <br/>
-  <img src="https://imgur.com/0LJeWDm.png" height="80%" width="80%" alt="Table"/><br /><br />
+  <img src="https://i.imgur.com/0LJeWDm.png" height="80%" width="80%" alt="Network services dashboard for quick access"/><br /><br />
 </p>
