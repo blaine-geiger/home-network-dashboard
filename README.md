@@ -1,7 +1,7 @@
 # Home Network Dashboard
 This is a simple web browser based dashboard to access local IP:port combinations for network resources. This simplifies the process and does
 not require the user to type the resource URL address into an address bar to gain access to frequently used interfaces. There are many ways to link to these
-resources (even simple browser bookmarks) but I felt it would give me a chance to refresh myself with an html, CSS, and JS project.
+resources (even simple browser bookmarks) but I felt it would give me a chance to refresh myself with an HTML and CSS. JavaScript wasn't needed to acheive functionality.
 
 The side pop-out menus were an afterthought and lead to specific pages within the services for more precise navigation. The pop-menus work by hovering with the mouse cursor. 
 They are to show function of coding and customization more than to serve an essential purpose.
