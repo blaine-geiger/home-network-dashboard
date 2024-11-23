@@ -13,13 +13,15 @@ The images below show the different menu options and each lead to specific inter
 <br>
 <br>
 
-<p align="center">Hosted Docker services and frequently used interfaces for quick access
-  <br/>
-  <img src="https://i.imgur.com/xroESzF.png" height="80%" width="80%" alt="Network services dashboard for quick access"/><br /><br />
-</p>
+<div align="center">
+
+![Dashboard_Services](https://raw.githubusercontent.com/blaine-geiger/images/165dbcadad427eb539fb135b6483cf04df7b4dd0/dashboard_devices.png)
+
+</div>
 
 
-<p align="center">Network devices and links for easy navigation
-  <br/>
-  <img src="https://i.imgur.com/0LJeWDm.png" height="80%" width="80%" alt="Network services dashboard for quick access"/><br /><br />
-</p>
+<div align="center">
+
+![ssh into server](https://raw.githubusercontent.com/blaine-geiger/images/165dbcadad427eb539fb135b6483cf04df7b4dd0/dashboard_services.png)
+
+</div>
